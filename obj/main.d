@@ -10,4 +10,5 @@
 .\obj\main.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
 .\obj\main.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 .\obj\main.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\obj\main.o: .\user\TSLib\TSUsart.h
 .\obj\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
