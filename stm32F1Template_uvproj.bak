@@ -585,6 +585,16 @@
               <FileType>5</FileType>
               <FilePath>.\user\TSLib\TSLibConfig.h</FilePath>
             </File>
+            <File>
+              <FileName>DriverA2051.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\TSLib\DriverA2051.c</FilePath>
+            </File>
+            <File>
+              <FileName>DriverA2051.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\TSLib\DriverA2051.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

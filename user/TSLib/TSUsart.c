@@ -28,8 +28,7 @@ void StandardDebugInit(void){
 	USART_Cmd(USART1, ENABLE);
 }
 
-int fputc(int ch, FILE *f)
-{
+int fputc(int ch, FILE *f){
    /* Write a character to the USART */
    USART_SendData(USART1, (uint8_t) ch);
 

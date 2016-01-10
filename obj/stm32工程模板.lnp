@@ -29,7 +29,8 @@
 ".\obj\main.o"
 ".\obj\tsusart.o"
 ".\obj\drivera2051.o"
---strict --scatter ".\obj\stm32工程模板.sct"
+".\obj\tstools.o"
+--library_type=microlib --strict --scatter ".\obj\stm32工程模板.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\stm32工程模板.map" -o .\obj\stm32工程模板.axf
