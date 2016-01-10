@@ -72,8 +72,6 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
-            <nStopB1X>0</nStopB1X>
-            <nStopB2X>0</nStopB2X>
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>0</RunUserProg1>
@@ -143,9 +141,10 @@
             <RestoreToolbox>1</RestoreToolbox>
             <RestoreTracepoints>0</RestoreTracepoints>
             <RestoreSysVw>1</RestoreSysVw>
+            <UsePdscDebugDescription>0</UsePdscDebugDescription>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>-1</TargetSelection>
+          <TargetSelection>11</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -159,7 +158,7 @@
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
             <InitializationFile></InitializationFile>
-            <Driver>STLink\ST-LINKIII-KEIL.dll</Driver>
+            <Driver>STLink\ST-LINKIII-KEIL_SWO.dll</Driver>
           </TargetDlls>
         </DebugOption>
         <Utilities>
@@ -169,10 +168,10 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4099</DriverSelection>
+            <DriverSelection>4103</DriverSelection>
           </Flash1>
           <bUseTDR>0</bUseTDR>
-          <Flash2>STLink\ST-LINKIII-KEIL.dll</Flash2>
+          <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
@@ -363,7 +362,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x;.\Libraries\CMSIS\CM3\CoreSupport;.\user;..\stm32工程模板</IncludePath>
+              <IncludePath>.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x;.\Libraries\CMSIS\CM3\CoreSupport;.\user;..\stm32工程模板;.\user\TSLib</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -565,6 +564,26 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\user\main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>TSLib</GroupName>
+          <Files>
+            <File>
+              <FileName>TSUsart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\TSLib\TSUsart.c</FilePath>
+            </File>
+            <File>
+              <FileName>TSUsart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\TSLib\TSUsart.h</FilePath>
+            </File>
+            <File>
+              <FileName>TSLibConfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\TSLib\TSLibConfig.h</FilePath>
             </File>
           </Files>
         </Group>

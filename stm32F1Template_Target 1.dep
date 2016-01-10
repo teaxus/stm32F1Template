@@ -327,3 +327,5 @@ I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7C554)
 I (user\TSLib\TSLibConfig.h)(0x56922EB2)
 F (.\user\TSLib\TSUsart.h)(0x56923830)()
 F (.\user\TSLib\TSLibConfig.h)(0x56922EB2)()
+F (.\user\TSLib\DriverA2051.c)(0x56923938)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\Libraries\STM32F10x_StdPeriph_Driver\inc -I.\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I.\Libraries\CMSIS\CM3\CoreSupport -I.\user -I..\stm32¹¤³ÌÄ£°å -I.\user\TSLib-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\obj\drivera2051.o --omf_browse .\obj\drivera2051.crf --depend .\obj\drivera2051.d)
+F (.\user\TSLib\DriverA2051.h)(0x569239AF)()
