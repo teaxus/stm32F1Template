@@ -1,11 +1,18 @@
-#include"DriverA2051.h"
+#include"TSTools.h"
 #include<stdio.h>
+#include"TSLibConfig.h"
 
+#include"DriverA2051.h"
+
+
+#define A2051_SCLK 2
+#define A2051_SDIO 3
+#define A2051_PD 4
 
 //int dumpWidth = 256; // Number of pixels to read for each frame.
 //byte frame[256];
 
-//void setup() {
+void setup() {
 //  Serial.begin(115200);
 
 //  reset();
@@ -20,7 +27,7 @@
 //  byte config = readRegister(REG_CONFIG_BITS);
 //  config |= B00000001; // Don't sleep (LED always powered on).
 //  writeRegister(REG_CONFIG_BITS, config);
-//}
+}
 
 //void loop() {
 //  // Allows to set the dump window by sending the number of lines to read via the serial port.
@@ -103,8 +110,8 @@
 //  return res;
 //}
 
-//void writeRegister(byte address, byte data) {
-//  address |= 0x80; // MSB indicates write mode.
+void writeRegister(byte address, byte data) {
+  address |= 0x80; // MSB indicates write mode.
 //  pinMode (SDIO, OUTPUT);
 
 //  for (byte i = 128; i > 0 ; i >>= 1) {
@@ -120,4 +127,4 @@
 //  }
 
 //  delayMicroseconds(100); // tSWW, tSWR = 100us min.
-//}
+}

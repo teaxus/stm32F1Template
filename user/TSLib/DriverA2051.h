@@ -1,9 +1,6 @@
 #ifndef DRIVER_H_
 #define DRIVER_H_
 
-#define SCLK 2
-#define SDIO 3
-#define PD 4
 
 #define REG_PRODUCT_ID 0x00
 #define REG_REVISION_ID 0x01

@@ -605,6 +605,16 @@
               <FileType>1</FileType>
               <FilePath>.\user\TSLib\TSTools.c</FilePath>
             </File>
+            <File>
+              <FileName>TSIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\TSLib\TSIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>TSIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\TSLib\TSIO.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

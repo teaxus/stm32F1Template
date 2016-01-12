@@ -5,4 +5,9 @@
 //DEBUG Config
 #define BaudRate 115200
 
+
+
+typedef char byte;
 #endif
+
+
