@@ -1,3 +1,7 @@
+#include"TSUsart.h"
+#include"TSTools.h"
+#include"TSIO.h"
+
 #ifndef TSLIBCONFIG_H_
 #define TSLIBCONFIG_H_
 
@@ -6,7 +10,7 @@
 #define BaudRate 115200
 
 
-
+#define nil NULL
 typedef char byte;
 #endif
 

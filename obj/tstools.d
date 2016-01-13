@@ -1,6 +1,7 @@
 .\obj\tstools.o: user\TSLib\TSTools.c
 .\obj\tstools.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\obj\tstools.o: user\TSLib\TSLibConfig.h
+.\obj\tstools.o: user\TSLib\TSUsart.h
 .\obj\tstools.o: user\TSLib\TSTools.h
 .\obj\tstools.o: .\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\obj\tstools.o: .\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h
@@ -13,3 +14,5 @@
 .\obj\tstools.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
 .\obj\tstools.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 .\obj\tstools.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\obj\tstools.o: user\TSLib\TSIO.h
+.\obj\tstools.o: user\TSLib\TSTools.h

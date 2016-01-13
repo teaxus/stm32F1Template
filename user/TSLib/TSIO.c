@@ -1,6 +1,17 @@
 #include "TSLibConfig.h"
 #include"TSIO.h"
 
+
+//更改IO模式
+void changeIOMode(TSIOOperationUnit *struct_GPIO,GPIOMode_TypeDef mode){
+	GPIO_InitTypeDef GPIO_InitStructure;
+	if(struct_GPIO != nil){
+		GPIO_InitStructure.GPIO_Mode = mode;
+		GPIO_InitStructure.GPIO_Pin = struct_GPIO->GPIO_Pin;
+		GPIO_InitStructure.GPIO_Speed = struct_GPIO->GPIO_Speed;
+		GPIO_Init(struct_GPIO->GPIOx, &GPIO_InitStructure);  
+	}
+}
 //设置高电平
 void setHigh(TSIOOperationUnit *struct_GPIO){
 		GPIO_SetBits(struct_GPIO->GPIOx,struct_GPIO->GPIO_Pin);
@@ -11,8 +22,22 @@ void setLow(TSIOOperationUnit *struct_GPIO){
 }
 //读取某一个端口的电平
 uint8_t ReadBit(TSIOOperationUnit *struct_GPIO){
-	return 0;
+	uint8_t result = 0;
+	GPIOMode_TypeDef mode_bak;
+	
+	if (struct_GPIO != nil){
+		mode_bak = struct_GPIO->GPIO_Mode;//备份一下当前的模式
+		//这个地方可以设定输入的时候的输入模式 我这里选择了 GPIO_Mode_Out_OD
+		if (struct_GPIO->GPIO_Mode != GPIO_Mode_Out_OD){
+			changeIOMode(struct_GPIO,GPIO_Mode_Out_OD);
+		}
+		
+		result = GPIO_ReadInputDataBit(struct_GPIO->GPIOx,struct_GPIO->GPIO_Pin);
+		changeIOMode(struct_GPIO,mode_bak);
+	}
+	return result;
 }
+
 
 void TSStandardIOInit(GPIO_TypeDef* GPIOx,
 											uint16_t GPIO_Pin,
@@ -20,14 +45,12 @@ void TSStandardIOInit(GPIO_TypeDef* GPIOx,
 											GPIOSpeed_TypeDef GPIO_Speed,
 										  TSIOOperation *operator_IO){
 	GPIO_InitTypeDef GPIO_InitStructure;
-//	TSIOOperationUnit struct_GPIO;	
 												
 	operator_IO->struct_GPIO.GPIOx = GPIOx;
 	operator_IO->struct_GPIO.GPIO_Pin = GPIO_Pin;
 	operator_IO->struct_GPIO.GPIO_Speed = GPIO_Speed;
   operator_IO->struct_GPIO.GPIO_Mode = GPIO_Mode;
 												
-	//operator_IO->struct_GPIO = struct_GPIO;
   operator_IO->High = setHigh;				
   operator_IO->Low = setLow;
 	operator_IO->ReadBit = ReadBit;

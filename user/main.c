@@ -13,10 +13,13 @@ int main(void){
 	int b=0;
 	
 	TSIOOperation operator_IO;
+	TSIOOperation operator_IO_1;
 	TSStandardIOInit(GPIOA,GPIO_Pin_1,GPIO_Mode_Out_OD,GPIO_Speed_2MHz,&operator_IO);
+	TSStandardIOInit(GPIOA,GPIO_Pin_2,GPIO_Mode_Out_OD,GPIO_Speed_2MHz,&operator_IO_1);
 	
 	SystemInit();
 	StandardDebugInit();
+	
 	
 	while(1){
 		//i++;
@@ -37,10 +40,5 @@ int main(void){
 		delay_us(1000*(1-dd));
 		operator_IO.Low(&operator_IO.struct_GPIO);
 		delay_us(1000*dd);
-		
-//		GPIO_SetBits(GPIOA,GPIO_Pin_1);
-//		delay_ms(1000);
-//		GPIO_ResetBits(GPIOA,GPIO_Pin_1);
-//		delay_ms(1000);
 	}
 }

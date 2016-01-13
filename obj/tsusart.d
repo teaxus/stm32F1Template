@@ -12,3 +12,6 @@
 .\obj\tsusart.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\obj\tsusart.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\obj\tsusart.o: user\TSLib\TSLibConfig.h
+.\obj\tsusart.o: user\TSLib\TSUsart.h
+.\obj\tsusart.o: user\TSLib\TSTools.h
+.\obj\tsusart.o: user\TSLib\TSIO.h

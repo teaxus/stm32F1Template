@@ -30,6 +30,7 @@
 ".\obj\tsusart.o"
 ".\obj\drivera2051.o"
 ".\obj\tstools.o"
+".\obj\tsio.o"
 --library_type=microlib --strict --scatter ".\obj\stm32¹¤³ÌÄ£°å.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

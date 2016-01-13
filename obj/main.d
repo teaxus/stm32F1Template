@@ -13,3 +13,4 @@
 .\obj\main.o: .\user\TSLib\TSUsart.h
 .\obj\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\obj\main.o: .\user\TSLib\TSTools.h
+.\obj\main.o: .\user\TSLib\TSIO.h
